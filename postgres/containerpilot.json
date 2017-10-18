@@ -1,0 +1,12 @@
+{
+  "consul": "{{ .CONSUL_URL }}:8500",
+  "services": [
+    {
+      "name": "postgres",
+      "port": 5432,
+      "poll": 10,
+      "ttl": 30,
+      "consul": {"deregisterCriticalServiceAfter": "90m"}
+    }
+  ]
+}
